@@ -19,13 +19,19 @@ namespace Day9_MSTesting_PracticeProblem
                 case 1:
                     Console.WriteLine("Please Enter all purchase Price List in a single line");
                     string inputPrices = Console.ReadLine();
-                   // string[] prices = input.Split(' ');
+                   
                     Purches purches = new Purches();
                   
                     List<string> onlyone=purches.OnlyOnce(inputPrices);
                     foreach (string s in onlyone)
                     {
                         Console.WriteLine("{0} Price Item purchase only one",s);
+                    }
+
+                    List<string> multipleOccurance = purches.moreThanOne(inputPrices);
+                    foreach (string s in multipleOccurance)
+                    {
+                        Console.WriteLine("{0} Price Item purchase more than one", s);
                     }
                     break;
 

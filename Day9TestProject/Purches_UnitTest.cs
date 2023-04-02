@@ -34,5 +34,35 @@ namespace Day9TestProject
             // Assert
             CollectionAssert.AreEqual(new List<string> { null }, result);
         }
+
+
+        [TestMethod]
+        public void TestMethodMoreThanOne()
+        {
+            // Arrange
+            Purches purches = new Purches();
+            string inputPrices = "10 20 10 30 40 40";
+
+            // Act
+            List<string> result = purches.moreThanOne(inputPrices);
+
+            // Assert
+            CollectionAssert.AreEqual(new List<string> { "10", "40" }, result);
+        }
+
+        [TestMethod]
+        public void TestMethodMoreThanOneForNull()
+        {
+            // Arrange
+            Purches purches = new Purches();
+            string inputPrices = "10 20 30 40";
+
+            // Act
+            List<string> result = purches.moreThanOne(inputPrices);
+
+            // Assert
+            CollectionAssert.AreEqual(new List<string> { null }, result);
+        }
+
     }
 }
