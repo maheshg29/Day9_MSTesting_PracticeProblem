@@ -42,9 +42,7 @@ namespace Day9_MSTesting_PracticeProblem
                 else
                 {
                     Console.WriteLine("second player's word not formed by rearranging the letters in the first player's word.\n " +
-                              " So {0} group is not eligible for the next round", i + 1);
-                    charContains = false;
-                    break;
+                              " So {0} group is not eligible for the next round", i + 1);                   
                 } 
             }
             return nextRoun;
