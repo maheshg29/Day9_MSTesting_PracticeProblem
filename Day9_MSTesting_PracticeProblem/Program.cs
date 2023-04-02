@@ -12,7 +12,8 @@ namespace Day9_MSTesting_PracticeProblem
         {
             Console.WriteLine("Welcome To Day 9 MS tesing Practice Problem");
             Console.WriteLine("Select any one option for Respective task\n" +
-                " 1. Purchase List Problem");
+                " 1. Purchase List Problem\n" +
+                " 2. Swap Competition");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -33,6 +34,16 @@ namespace Day9_MSTesting_PracticeProblem
                     {
                         Console.WriteLine("{0} Price Item purchase more than one", s);
                     }
+                    break;
+
+                    case 2:
+                    SwapCompetition swapCompetition = new SwapCompetition();
+                    List<int> nextRound=swapCompetition.Competition();
+                    foreach (int s in nextRound)
+                    {
+                        Console.WriteLine("Group {0} is Eligible for next Round ", s);
+                    }
+
                     break;
 
                 default:

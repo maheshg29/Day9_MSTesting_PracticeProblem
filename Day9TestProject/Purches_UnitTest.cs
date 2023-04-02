@@ -1,6 +1,9 @@
 using Day9_MSTesting_PracticeProblem;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace Day9TestProject
 {
@@ -64,5 +67,25 @@ namespace Day9TestProject
             CollectionAssert.AreEqual(new List<string> { null }, result);
         }
 
+        
+        [TestMethod]
+        public void TestMethodCompetition()
+        {
+
+            // Arrange
+            SwapCompetition swapCompetition = new SwapCompetition();
+            var expectedNextRound = new List<int> { 1, 2 };
+            var input = new StringReader("3\nabc\ncba\ndef\nfed\nghj\ntyu");
+            Console.SetIn(input);
+
+            // Act
+            var actualNextRound = swapCompetition.Competition();
+
+            // Assert
+            CollectionAssert.AreEqual(expectedNextRound, actualNextRound);
+        }
+
     }
+
+    
 }
